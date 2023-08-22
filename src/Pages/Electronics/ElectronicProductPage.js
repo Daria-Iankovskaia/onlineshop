@@ -10,13 +10,12 @@ export const ElectronicProductPage = () => {
         <img src={singleElectronicProductData.image} alt="Product image"></img>
         <h2>{singleElectronicProductData.title}</h2>
         <h3>{singleElectronicProductData.price}$</h3>
-        <h4>{singleElectronicProductData.description}</h4>
-        <Button />
+        <p>{singleElectronicProductData.description}</p>
+        <Button productDetails={singleElectronicProductData} data-testid="button-id"/>
     </div>
 }
 
 export async function loader(match) {
-    debugger;
     const { id } = match.params;
     return fetch(`https://fakestoreapi.com/products/${id}`)
         .then(res => res.json())
