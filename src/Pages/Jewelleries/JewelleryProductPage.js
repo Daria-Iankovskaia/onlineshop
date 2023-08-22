@@ -11,7 +11,7 @@ export const JewelleryProductPage = () => {
         <h2>{singleJewelleryProductData.title}</h2>
         <h3>{singleJewelleryProductData.price}$</h3>
         <h4>{singleJewelleryProductData.description}</h4>
-        <Button />
+        <Button productDetails={singleJewelleryProductData} />
     </div>
 }
 
